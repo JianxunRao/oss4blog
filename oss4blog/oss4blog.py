@@ -94,8 +94,8 @@ signal.signal(signal.SIGINT, exit_gracefully)
 
 try:
     bucket = config.get('config', 'Bucket')  # 设置  bucket
-    accessKey = config.get('config', 'AccessKeyId')  # 设置  accessKey
-    secretKey = config.get('config', 'AccessKeySecret')  # 设置  secretKey
+    accessKey = os.getenv('ACCESS_KEY_ID', config.get('config', 'AccessKeyId'))  # 设置  accessKey
+    secretKey = os.getenv('ACCESS_KEY_SECRET', config.get('config', 'AccessKeySecret'))  # 设置  secretKey
     path_to_watch = config.get('config', 'PathToWatch')  # 设置   监控文件夹
     endpoint = config.get('config', 'Endpoint')  # 设置Endpoint
     enable = config.get('custom_url', 'Enable')  # 设置自定义使能 custom_url

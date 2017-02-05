@@ -91,3 +91,5 @@ ENV/
 # Rope project settings
 .ropeproject
 
+path_to_watch/
+/oss4blog/MARKDOWN_FORMAT_URLS.txt
