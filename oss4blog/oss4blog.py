@@ -98,7 +98,7 @@ try:
     secretKey = os.getenv('ACCESS_KEY_SECRET', config.get('config', 'AccessKeySecret'))  # 设置  secretKey
     path_to_watch = config.get('config', 'PathToWatch')  # 设置   监控文件夹
     endpoint = config.get('config', 'Endpoint')  # 设置Endpoint
-    enable = config.get('custom_url', 'Enable')  # 设置自定义使能 custom_url
+    enable = config.get('custom_url', 'Enable')  # 设置自定义的custom_url
     if enable == 'false':
         print 'custom_url not set'
     else:
